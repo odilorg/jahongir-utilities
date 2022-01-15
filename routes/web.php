@@ -1,11 +1,12 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TourgroupController;
-use App\Http\Controllers\TransportController;
 use App\Http\Controllers\HotelreservationController;
+use App\Http\Controllers\GazreportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +30,9 @@ Route::middleware(['auth', 'revalidate'])->group(function () {
     Route::resources([
         'hotelreservations' => HotelreservationController::class,
         'tourgroups' => TourgroupController::class,
-    
+        'gazreports' => GazreportController::class,
     ]);
-    Route::post('/transports/auto', [TransportController::class, 'auto'])->name('auto');
-    Route::post('/transports/air', [TransportController::class, 'air'])->name('air');
-    Route::post('/transports/train', [TransportController::class, 'train'])->name('train');    
+    
     
 });
 

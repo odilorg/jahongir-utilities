@@ -51,7 +51,7 @@
                             <tbody>
                                 @foreach ($utilities as $item )
                                 <tr>
-                                    <td>{{ $item->report_date }}</td>
+                                    <td>{{ date('d/m/Y', strtotime($item->report_date)) }}</td>
                                     <td>{{ $item->utility_category }}</td>
                                     <td>{{ $item->counter_new }}</td>
                                     <td>{{ $item->counter_old }} </span></td>

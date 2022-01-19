@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Utility;
 use Illuminate\Http\Request;
+use Jenssegers\Date\Date;
 
 class UtilityController extends Controller
 {
@@ -65,8 +66,13 @@ class UtilityController extends Controller
     public function show($id)
     {
         $utility = Utility::find($id);
-   // dd($utility->report_date);
-        return view('utilities.show', compact('utility'));
+
+        Date::setLocale('uz');
+//dd($utility);
+//$r = Date::now()->format('l j F Y H:i:s');
+       $r = new Date(Utility::find($id)->report_date);
+        $sana = ($r->format(' F Y '));
+        return view('utilities.show', compact('utility', 'sana'));
     }
 
     /**

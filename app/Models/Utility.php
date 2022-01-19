@@ -15,8 +15,8 @@ class Utility extends Model
    {
     $this->attributes['report_date'] = date('Y-m-d', strtotime($value) );
    }
-   public function getReportDateAttribute($value)
-{
-    return Carbon::parse($value)->format('d/m/Y');
-}
+//    public function getReportDateAttribute($value)
+// {
+//     return Carbon::parse($value)->format('d/m/Y');
+// }
 }

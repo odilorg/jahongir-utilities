@@ -1,0 +1,7 @@
+utilities
+1. report_date
+2. utility_category
+3. counter_new
+4. counter_old
+5. counter_difference
+6. expense_category_id

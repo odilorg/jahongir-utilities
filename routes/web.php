@@ -7,6 +7,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TourgroupController;
 use App\Http\Controllers\HotelreservationController;
 use App\Http\Controllers\GazreportController;
+use App\Http\Controllers\UtilityController;
+use App\Models\Utility;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +33,7 @@ Route::middleware(['auth', 'revalidate'])->group(function () {
         'hotelreservations' => HotelreservationController::class,
         'tourgroups' => TourgroupController::class,
         'gazreports' => GazreportController::class,
+        'utilities' => UtilityController::class,
     ]);
     
     

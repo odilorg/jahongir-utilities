@@ -35,7 +35,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     </script>
 </head>
-@yield('contentregister')
+
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -240,11 +240,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         @endcan
                         <li class="nav-item">
-                            <a href="{{ route('gazreports.index'); }}"
-                                class="nav-link {{ (request()->is('gazreports*')) ? 'active' : '' }}">
+                            <a href="{{ route('utilities.index'); }}"
+                                class="nav-link {{ (request()->is('utilities*')) ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-money-check-alt"></i>
                                 <p>
-                                    Gaz Reports
+                                    Kommunal Hisobotlar
                                 </p>
                             </a>
                         </li>
